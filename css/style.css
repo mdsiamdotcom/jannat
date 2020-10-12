@@ -1,3 +1,4 @@
+
 *, body{
     padding: 0;
     margin: 0;
@@ -56,6 +57,23 @@
 header{
     background-color: transparent;
 }
+
+header.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(188, 214, 188);
+    transform: translateY(-100%);
+    transition: 0.5s;
+    padding: 20px 0;
+}
+.header.sticky a{
+    color: green;
+}
+body.scroll header.sticky{
+    transform: translateY(0);
+}
 .nav-wrapper{
     max-width: 1000px;
     width: 80%;
@@ -79,13 +97,12 @@ header{
     font-weight: bold;
     cursor: pointer;
     line-height: 25px;
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid transparent;
     padding-bottom: 3px;
     transition: 0.5s;
 }
 .nav-wrapper ul li a:hover{
-    font-size: 18px;
-    border-bottom: 1px solid blueviolet;
+    border-bottom: 2px solid blueviolet;
 }
 
 
@@ -234,7 +251,10 @@ i{
     text-align: center;
    padding: 20px 0;
 }
-@media (max-width:760px){
+
+
+
+@media (max-width:768px){
     .menu{
         width: 0;
         display: none;
@@ -245,7 +265,45 @@ i{
     .services .items{
         display: flex;
         flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .services .item1{
         width: 100%;
+    }
+    .portfolio{
+        background-color: white;
+    }
+    .showcase{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+    }
+    .showcase .images{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media(max-width:480px){
+    
+    .logo{
+        width: 100%;
+    }
+    .services{
+        background-color: grey;
+
+    }
+    .services .items{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .services .items .item1{
+        border: 1px solid black;
+        margin-bottom: 5px;
+        box-shadow: 2px;
+        background-color: white;
     }
     .services .item1{
         width: 100%;
@@ -253,9 +311,10 @@ i{
     .showcase{
         display: flex;
         flex-direction: column;
-    
+        width: 100%;
     }
     .showcase .images{
-        width: 100%;
+        width: 80%;
+        margin:0 auto;
     }
 }
