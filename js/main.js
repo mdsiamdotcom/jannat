@@ -6,6 +6,11 @@ $(document).ready(function(){
         var scrollFromTop = $(window).scrollTop();
         $("body").toggleClass("scroll", (scrollFromTop>60));
     });
-
-
+    
+//javascript start  for loader
+    window.addEventListener("load", function () {
+        const loader = document.querySelector(".loader");
+        loader.className += " hidden"; // class "loader hidden"
+//javascript end for loader
+    });
 });

@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website one</title>
-    
+    <title>Website one updated</title>
+   
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <!-- adding div with class loader for loading  -->
+    <div class="loader">
+        <img src="images/spinner.svg" alt="Loading..." />
+    </div>
+    <!-- end of loader  -->
+
+
+    
     <div class="container">
         <div class="cover" id="home">
             <header>
@@ -28,12 +36,14 @@
                 </div>
             </header>
             <div class="home-content">
+
                 <h1>BEST IT TRAINING CENTER IN <span><br>
                     2020</span></h1>
                 <p>Lorem ipsum  adipisicing elit. Mollitia soluta eius in nobis explicabo a tempore facere. Provident officia necessitatibus, incidunt sit, nostrum, dignissimos dolor molestiae vitae obcaecati quos consequatur?</p>
                <div class="see-more"> <a href="#">See more</a></div>
             </div>
         </div>
+        
     </div>
 
     <!-- update section  -->
@@ -80,6 +90,8 @@
 
     <!-- portfolio section  -->
     <section id="portfolio">
+        <h1>Portfolio</h1>
+        <div class="breaker"><hr></div>
         <div class="showcase">
             <div class="images"> <img src="images/home.jpg" alt="">   </div>
             <div class="images"> <img src="images/image1.jpg" alt="">   </div>
@@ -104,22 +116,34 @@
     </section>
    <!-- contact section -->
    <section id="contact">
-       <div class="content">
-           <h1>Contact With Us</h1>
-           <div class="breaker">
-               <hr>
-           </div>
-           <div class="icons">
-               <div class="icons-item">
-                    <i class="fa fa-phone fa-3x"></i>
-                    <div class="text">+88073962973</div>
-                </div>
-           
-               <div class="icons-item">
-                    <i class="fa fa-envelope-open fa-3x"></i>
-                    <div class="text">contactus@mdsiam.com</div>
-            </div>
-        </div>
+       <div class="content">  
+           <h1>Let's Talk</h1>
+           <div class="breaker"></div>
+           <p>You can contact with me through this contact form.  </p>
+        <form action="">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your First Name..">
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="bd">Bangladesh</option>
+              <option value="pk">Pakistan</option>
+              <option value="ind">India</option>
+              <option value="malaysia">Malaysia</option>
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+        
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        
+            <input type="submit" value="Submit">
+          </form>
+
        </div>
    </section>
 
